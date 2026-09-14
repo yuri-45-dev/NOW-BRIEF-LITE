@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/capsule_surface_light">
+
+    <!-- Same visual spec as now_pill_layout.xml, inlined here so ViewBinding
+         exposes nowPillText/nowPillIcon directly on ActivityMainBinding. -->
+    <LinearLayout
+        android:id="@+id/now_pill_root"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="6dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/pill_background_day">
+
+        <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="10dp">
+
+            <View
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/pill_icon_badge" />
+
+            <ImageView
+                android:id="@+id/now_pill_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_now_brief"
+                android:tint="@color/capsule_text_on_gradient"
+                android:contentDescription="@string/app_name" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/now_pill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/capsule_text_on_gradient"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:text="@string/period_morning" />
+
+    </LinearLayout>
+</FrameLayout>

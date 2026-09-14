@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Now Brief</string>
+    <string name="channel_now_brief_name">Now Brief — Live Capsule</string>
+    <string name="channel_now_brief_description">Shows the current time-of-day capsule (morning / day / evening / night).</string>
+    <string name="period_morning">Now brief morning</string>
+    <string name="period_day">Now brief day</string>
+    <string name="period_evening">Now brief evening</string>
+    <string name="period_night">Now brief night</string>
+</resources>

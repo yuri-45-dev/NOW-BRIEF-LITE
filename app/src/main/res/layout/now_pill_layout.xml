@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  RemoteViews-safe layout: FrameLayout/LinearLayout + ImageView + TextView
+  only, so it can be reused verbatim both inside the in-app preview
+  (activity_main.xml duplicates it) and inside the home-screen widget's
+  RemoteViews (NowBriefWidgetProvider builds a RemoteViews against this
+  exact layout).
+
+  NOTE: this pill is the HOME-SCREEN WIDGET capsule, not the system Live
+  Update chip. Android 16 Live Update promotion requires a standard
+  notification style (BigTextStyle/CallStyle/ProgressStyle) and explicitly
+  forbids custom RemoteViews for that surface (see NowBriefNotifier.kt) — so
+  the lock-screen/status-bar "Now Bar" capsule is drawn by the OS itself from
+  the notification's icon + color, not by this file. This layout is what you
+  see if you add the "Now Brief" widget to your home screen.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/now_pill_root"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="6dp"
+    android:paddingEnd="20dp"
+    android:background="@drawable/pill_background_day">
+
+    <FrameLayout
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="10dp">
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/pill_icon_badge" />
+
+        <ImageView
+            android:id="@+id/now_pill_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_now_brief"
+            android:tint="@color/capsule_text_on_gradient"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/now_pill_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/capsule_text_on_gradient"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="@string/period_morning" />
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  updatePeriodMillis is deliberately omitted (defaults to 0 = never) so the
+  system never polls this widget on a timer. It is only ever pushed new
+  RemoteViews from PeriodAlarmReceiver, at most 4 times a day.
+-->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="120dp"
+    android:minHeight="48dp"
+    android:targetCellWidth="3"
+    android:targetCellHeight="1"
+    android:resizeMode="none"
+    android:widgetCategory="home_screen"
+    android:initialLayout="@layout/now_pill_layout" />

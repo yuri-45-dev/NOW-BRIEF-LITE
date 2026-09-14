@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base surface -->
+    <color name="capsule_surface_light">#FFFCFCFF</color>
+    <color name="capsule_surface_dark">#FF1B1B1F</color>
+    <color name="capsule_text_on_gradient">#FFFFFFFF</color>
+    <color name="capsule_icon_badge">#33FFFFFF</color>
+
+    <!-- Per-period accent + two-stop gradient — original values, saturated to
+         match the visual weight of the reference Now Bar capsule (vivid
+         gradient + white text), not the pastel first pass. -->
+    <color name="period_morning_accent">#FF2FB6A3</color>
+    <color name="period_morning_gradient_start">#FF2FB6A3</color>
+    <color name="period_morning_gradient_end">#FFF2B441</color>
+
+    <color name="period_day_accent">#FFE8A63C</color>
+    <color name="period_day_gradient_start">#FFF2B441</color>
+    <color name="period_day_gradient_end">#FF4FA3E8</color>
+
+    <color name="period_evening_accent">#FF8C5CD9</color>
+    <color name="period_evening_gradient_start">#FF6C63D9</color>
+    <color name="period_evening_gradient_end">#FFE0679C</color>
+
+    <color name="period_night_accent">#FF33448C</color>
+    <color name="period_night_gradient_start">#FF1B2A4A</color>
+    <color name="period_night_gradient_end">#FF4A3A7A</color>
+</resources>
